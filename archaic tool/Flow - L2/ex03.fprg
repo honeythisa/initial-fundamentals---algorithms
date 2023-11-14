@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-30 10:15:03 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDUtMzA7IjEwOjAyOjUwICI7MTkzOA=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDUtMzA7IjEwOjE1OjAzICI7MTsyMDQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, Q, C" type="Integer" array="False" size=""/>
+            <declare name="R" type="Real" array="False" size=""/>
+            <do expression="N &gt; 0">
+                <input variable="N"/>
+                <if expression="N &gt; 0">
+                    <then>
+                        <assign variable="Q" expression="N ^2"/>
+                        <output expression="&quot;Quadrado: &quot;&amp;Q" newline="True"/>
+                        <assign variable="C" expression="N^3"/>
+                        <output expression="&quot;Cubo: &quot;&amp;C" newline="True"/>
+                        <assign variable="R" expression="sqrt(N)"/>
+                        <output expression="&quot;Raiz quadrada: &quot;&amp; R" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <output expression="&quot;Programa finalizado&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-25 07:51:11 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMjU7IjA3OjM1OjQ3ICI7MTk1OQ=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMjU7IjA3OjUxOjExICI7MTsyMDU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="v, raio" type="Real" array="False" size=""/>
+            <input variable="raio"/>
+            <assign variable="v" expression="(4/3) * pi * raio^3"/>
+            <output expression="&quot;Uma esfera de raio &quot;&amp;raio&amp;&quot; tem o volume = &quot;&amp;v" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

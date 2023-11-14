@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-30 09:34:29 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDUtMzA7IjA4OjA4OjE3ICI7MTk1NA=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDUtMzA7IjA5OjM0OjI5ICI7MTsyMDY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="13"/>
+            <output expression="&quot;N&#250;meros &#237;mpares entre 12 e 200:&quot;" newline="True"/>
+            <while expression="num &lt; 200">
+                <if expression="num % 2 = 0">
+                    <then/>
+                    <else>
+                        <output expression="&quot; , &quot;&amp;num" newline="False"/>
+                    </else>
+                </if>
+                <assign variable="num" expression="num + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

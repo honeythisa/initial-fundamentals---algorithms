@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="raul_"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-06-08 02:38:15 "/>
+        <attribute name="created" value="cmF1bF87TEFQVE9QLTZGRTBKQjdFOzIwMjMtMDYtMDg7IjExOjI2OjM5ICI7Mjc0Mw=="/>
+        <attribute name="edited" value="cmF1bF87TEFQVE9QLTZGRTBKQjdFOzIwMjMtMDYtMDg7IjAxOjIxOjM4ICI7MTY7Mjg5OA=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDYtMDg7IjAyOjM4OjE1ICI7MjsyMDY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="codCidade, numVeiculo, numAcidente, qtdcidade, maior, maiorCodCidade, menor, menorCodCidade, totalVeiculo, totalVeiculos, cont2000, contcidade2000" type="Integer" array="False" size=""/>
+            <declare name="mediaveiculo, media2000" type="Real" array="False" size=""/>
+            <assign variable="qtdcidade" expression="0"/>
+            <assign variable="codCidade" expression="0"/>
+            <assign variable="numVeiculo" expression="0"/>
+            <assign variable="numAcidente" expression="0"/>
+            <assign variable="maior" expression="0"/>
+            <assign variable="maiorCodCidade" expression="0"/>
+            <assign variable="menor" expression="1000000"/>
+            <assign variable="menorCodCidade" expression="0"/>
+            <assign variable="totalVeiculo" expression="0"/>
+            <assign variable="totalVeiculos" expression="0"/>
+            <assign variable="contCidade2000" expression="0"/>
+            <while expression="qtdcidade &lt;= 4">
+                <assign variable="qtdcidade" expression="qtdcidade + 1"/>
+                <output expression="&quot;Codigo da cidade: &quot;&amp;qtdcidade" newline="True"/>
+                <input variable="codCidade"/>
+                <output expression="&quot;Digite o numero de veiculos de passeio da cidade: &quot;&amp;qtdcidade" newline="True"/>
+                <input variable="numVeiculo"/>
+                <output expression="&quot;Numero de acidentes de tr&#226;nsito com v&#237;timas: &quot;&amp;qtdcidade" newline="True"/>
+                <input variable="numAcidente"/>
+                <if expression="numAcidente &gt; maior">
+                    <then>
+                        <assign variable="maior" expression="numAcidente"/>
+                        <assign variable="maiorCodCidade" expression="codCidade"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="numAcidente &lt; menor">
+                    <then>
+                        <assign variable="menor" expression="numAcidente"/>
+                        <assign variable="menorCodCidade" expression="codCidade"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="totalVeiculo" expression="totalVeiculo + numVeiculo"/>
+                <assign variable="mediaVeiculo" expression="totalVeiculo / 5"/>
+                <if expression="numVeiculo &lt; 2000">
+                    <then>
+                        <assign variable="totalVeiculos" expression="totalVeiculos + numVeiculo"/>
+                        <assign variable="contCidade2000" expression="contCidade2000 + 1"/>
+                        <assign variable="media2000" expression="totalVeiculos / contCidade2000"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <output expression="&quot;O maior indice de acidente de transito &#233;: &quot;&amp;maior" newline="True"/>
+            <output expression="&quot;O codigo da cidade &#233;: &quot;&amp;maiorCodCidade" newline="True"/>
+            <output expression="&quot;O menor indice de acidentes de transito &#233;: &quot;&amp;menor" newline="True"/>
+            <output expression="&quot;A media de veiculos nas cidades &#233;: &quot;&amp;mediaveiculo" newline="True"/>
+            <output expression="&quot;A media de acidentes nas cidades com menos de 2.000 veiculos &#233;: &quot;&amp;media2000" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

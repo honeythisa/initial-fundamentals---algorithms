@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-06-20 08:08:24 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDYtMjA7IjA3OjM2OjIyICI7MTk1MA=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDYtMjA7IjA4OjA4OjI0ICI7MTsyMDYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vet" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="vet[i]" expression="i + 1"/>
+                <output expression="vet[i]&amp; &quot;, &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

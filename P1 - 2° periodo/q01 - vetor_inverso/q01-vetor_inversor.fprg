@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="55349"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 01:58:38 "/>
+        <attribute name="created" value="NTUzNDk7VEHDllM7MjAyMy0wOS0xMzsiMDc6NDQ6MDAgIjsxOTAy"/>
+        <attribute name="edited" value="NTUzNDk7VEHDllM7MjAyMy0wOS0xMzsiMDg6MTM6MjcgIjszOzIwMTg="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDktMTY7IjAxOjI0OjAzICI7MTttZWxpcztNRUw7MjAyMy0wNi0yMDsiMDk6NDU6MzkgIjtqdW50YXIgdmV0b3Jlcy5mcHJnOzYwNzk="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDktMTY7IjAxOjU4OjM4ICI7MjsyMDcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Q01 - Algoritmo inversor de vetor"/>
+            <declare name="vetorOriginal" type="Real" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <comment text="aqui ele coleta os 10 n&#250;meros necess&#225;rios"/>
+            <while expression="i &lt; 10">
+                <input variable="vetorOriginal[i]"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <comment text="e nessa fun&#231;&#227;o, a qual tem um algoritmo dentro dela, retorna o inverso dos n&#250;meros que foram recolhidos acima"/>
+            <call expression="inversor(vetorOriginal)"/>
+        </body>
+    </function>
+    <function name="inversor" type="None" variable="">
+        <parameters>
+            <parameter name="vetorOriginal" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="vetorInversor" type="Real" array="True" size="10"/>
+            <declare name="j, i" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="9"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; 10">
+                <assign variable="vetorInversor[j]" expression="vetorOriginal[i]"/>
+                <assign variable="j" expression="j - 1"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="vetorInversor[i]&amp; &quot;, &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

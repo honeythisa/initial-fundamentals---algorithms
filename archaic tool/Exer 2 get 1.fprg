@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="07761094640"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-06-27 09:31:48 "/>
+        <attribute name="created" value="MDc3NjEwOTQ2NDA7QjAzTTExOzIwMjMtMDYtMjc7IjA4OjE3OjIwICI7MjEwNw=="/>
+        <attribute name="edited" value="MDc3NjEwOTQ2NDA7QjAzTTExOzIwMjMtMDYtMjc7IjA5OjMxOjQ4ICI7MzsyMjI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vet, vetprimo" type="Integer" array="True" size="15"/>
+            <declare name="i, cont, n, contprimo" type="Real" array="False" size=""/>
+            <assign variable="contprimo" expression="0"/>
+            <for variable="i" start="0" end="14" direction="inc" step="1">
+                <output expression="&quot;Digite o n&#250;mero do &quot;&amp;i + 1&amp;&quot;&#176; vetor: &quot;" newline="True"/>
+                <input variable="vet[i]"/>
+                <assign variable="cont" expression="0"/>
+                <for variable="n" start="1" end="vet[i]" direction="inc" step="1">
+                    <if expression="(vet[i] % n) = 0">
+                        <then>
+                            <assign variable="cont" expression="cont + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="(cont &gt; 0) and (cont &lt;=2)">
+                    <then>
+                        <assign variable="vetprimo[contprimo]" expression="vet[i]"/>
+                        <assign variable="contprimo" expression="contprimo + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="contprimo - 1" direction="inc" step="1">
+                <output expression="vetprimo[i]&amp; &quot;, &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-11 08:06:40 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA2OjM4OjIwICI7MTk0Nw=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA4OjA2OjQwICI7MjsyMDU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lado1, lado2, lado3" type="Integer" array="False" size=""/>
+            <input variable="lado1"/>
+            <input variable="lado2"/>
+            <input variable="lado3"/>
+            <if expression="(lado1 = lado2) and (lado2 = lado3)">
+                <then>
+                    <output expression="&quot;Equil&#225;tero&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(lado1 = lado2) and (lado2 != lado3)">
+                <then>
+                    <output expression="&quot;Is&#243;sceles&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(lado1 != lado2) and (lado2 != lado3) and (lado1 != lado3)">
+                <then>
+                    <output expression="&quot;Escaleno&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

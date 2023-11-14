@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-11 07:38:17 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA3OjIzOjEwICI7MTk0MQ=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA3OjM4OjE3ICI7MTsyMDYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, n3, menor, maior" type="Integer" array="False" size=""/>
+            <input variable="n1"/>
+            <input variable="n2"/>
+            <input variable="n3"/>
+            <assign variable="menor" expression="n1"/>
+            <comment text="testar o menor numero"/>
+            <if expression="(n2 &lt; n1) and (n2 &lt; n3)">
+                <then>
+                    <assign variable="menor" expression="n2"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(n3 &lt; n1) and (n3 &lt; n2)">
+                <then>
+                    <assign variable="menor" expression="n3"/>
+                </then>
+                <else/>
+            </if>
+            <comment text="testar o maior numero"/>
+            <assign variable="maior" expression="n1"/>
+            <if expression="(n2 &gt; n1) and (n2 &gt; n3)">
+                <then>
+                    <assign variable="maior" expression="n2"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(n3 &gt; n1) and (n3 &gt; n2)">
+                <then>
+                    <assign variable="maior" expression="n3"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;O maior n&#250;mero &#233; o &quot; &amp; maior" newline="True"/>
+            <output expression="&quot;O menor n&#250;mero &#233; o &quot; &amp; menor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

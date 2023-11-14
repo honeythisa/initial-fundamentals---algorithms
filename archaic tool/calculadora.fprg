@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="00011520680"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-16 09:47:21 "/>
+        <attribute name="created" value="MDAwMTE1MjA2ODA7QjA0TTIxOzIwMjMtMDgtMTY7IjA3OjU4OjUxICI7MjA5Ng=="/>
+        <attribute name="edited" value="MDAwMTE1MjA2ODA7QjA0TTIxOzIwMjMtMDgtMTY7IjA5OjQ3OjIxICI7ODsyMjA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opcao" type="Integer" array="False" size=""/>
+            <do expression="opcao &lt;&gt; 10">
+                <assign variable="opcao" expression="menu()"/>
+                <if expression="opcao = 1">
+                    <then>
+                        <call expression="operacaoSoma()"/>
+                    </then>
+                    <else>
+                        <if expression="opcao = 2">
+                            <then>
+                                <call expression="operacaoSubtracao()"/>
+                            </then>
+                            <else>
+                                <if expression="opcao = 3">
+                                    <then>
+                                        <output expression="&quot;[DEBUG] opcao 3&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="opcao = 4">
+                                            <then>
+                                                <output expression="&quot;[DEBUG] opcao 4&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="opcao = 5">
+                                                    <then>
+                                                        <output expression="&quot;[DEBUG] opcao 5&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="opcao = 6">
+                                                            <then>
+                                                                <output expression="&quot;[DEBUG] opcao 6&quot;" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="opcao = 7">
+                                                                    <then>
+                                                                        <output expression="&quot;[DEBUG] opcao 7&quot;" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="opcao = 8">
+                                                                            <then>
+                                                                                <output expression="&quot;[DEBUG] opcao 8&quot;" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <if expression="opcao = 9">
+                                                                                    <then>
+                                                                                        <output expression="&quot;[DEBUG] opcao 9&quot;" newline="True"/>
+                                                                                    </then>
+                                                                                    <else>
+                                                                                        <if expression="opcao = 10">
+                                                                                            <then>
+                                                                                                <output expression="&quot;[DEBUG] saindo da calculadora&quot;" newline="True"/>
+                                                                                            </then>
+                                                                                            <else>
+                                                                                                <output expression="&quot;Opcao invalida&quot;" newline="True"/>
+                                                                                            </else>
+                                                                                        </if>
+                                                                                    </else>
+                                                                                </if>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <call expression="pausar()"/>
+            </do>
+            <output expression="&quot;Calculadora finalizada!&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="menu" type="Integer" variable="op">
+        <parameters/>
+        <body>
+            <declare name="op" type="Integer" array="False" size=""/>
+            <output expression="&quot;.:: Calculadora ::.&quot;" newline="True"/>
+            <output expression="&quot;    1. X + Y       &quot;" newline="True"/>
+            <output expression="&quot;    2. X - Y       &quot;" newline="True"/>
+            <output expression="&quot;    3. X * Y       &quot;" newline="True"/>
+            <output expression="&quot;    4. X / Y       &quot;" newline="True"/>
+            <output expression="&quot;    5. X!          &quot;" newline="True"/>
+            <output expression="&quot;    6. sen( x )    &quot;" newline="True"/>
+            <output expression="&quot;    7. cos( x )    &quot;" newline="True"/>
+            <output expression="&quot;    8. tan( x )    &quot;" newline="True"/>
+            <output expression="&quot;    9. f(x, y) = (x^2 + y^3)/(x - y)&quot;" newline="True"/>
+            <output expression="&quot;   10. sair &quot;" newline="True"/>
+            <output expression="&quot; opcao: &quot;" newline="False"/>
+            <input variable="op"/>
+        </body>
+    </function>
+    <function name="operacaoSoma" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="X, Y, resultado" type="Real" array="False" size=""/>
+            <output expression="&quot;Opera&#231;&#227;o: 1. soma&quot;" newline="True"/>
+            <output expression="&quot;X = &quot;" newline="False"/>
+            <input variable="X"/>
+            <output expression="&quot;Y = &quot;" newline="False"/>
+            <input variable="Y"/>
+            <assign variable="resultado" expression="X + y"/>
+            <output expression="X &amp; &quot; + &quot; &amp; Y &amp; &quot; = &quot; &amp; resultado" newline="True"/>
+        </body>
+    </function>
+    <function name="operacaoSubtracao" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="X, Y, resultado" type="Real" array="False" size=""/>
+            <output expression="&quot;Opera&#231;&#227;o: 2. subtracao&quot;" newline="True"/>
+            <output expression="&quot;X = &quot;" newline="False"/>
+            <input variable="X"/>
+            <output expression="&quot;Y = &quot;" newline="False"/>
+            <input variable="Y"/>
+            <assign variable="resultado" expression="X - Y"/>
+            <output expression="X &amp; &quot; - &quot; &amp; Y &amp; &quot; = &quot; &amp; resultado" newline="True"/>
+        </body>
+    </function>
+    <function name="pausar" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="v" type="String" array="False" size=""/>
+            <output expression="&quot;Pressione uma tecla para continuar&quot;" newline="False"/>
+            <input variable="v"/>
+        </body>
+    </function>
+</flowgorithm>

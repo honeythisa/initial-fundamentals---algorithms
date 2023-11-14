@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-06-07 03:33:59 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDYtMDY7IjA3OjMyOjI5ICI7MTk1Nw=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDYtMDc7IjAzOjMzOjU5ICI7MjsyMDY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="idade, time, jogadores, idadeInferior, somaAlt, somaId, pesoSup" type="Integer" array="False" size=""/>
+            <declare name="mediaIdade, mediaAlt, porcentagem" type="Integer" array="False" size=""/>
+            <declare name="peso, altura" type="Real" array="False" size=""/>
+            <assign variable="somaId" expression="0"/>
+            <assign variable="somaAlt" expression="0"/>
+            <assign variable="idadeInferior" expression="0"/>
+            <assign variable="pesoSup" expression="0"/>
+            <for variable="time" start="0" end="10" direction="inc" step="1">
+                <output expression="&quot;Time&quot;&amp; time+1" newline="True"/>
+                <for variable="jogadores" start="0" end="11" direction="inc" step="1">
+                    <output expression="&quot;Jogador&quot;&amp; jogadores+1" newline="True"/>
+                    <input variable="idade"/>
+                    <input variable="peso"/>
+                    <input variable="altura"/>
+                    <if expression="idade &lt; 20">
+                        <then>
+                            <assign variable="idade" expression="idadeInferior+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="somaId" expression="somaId + idade"/>
+                    <assign variable="somaAlt" expression="somaAlt + altura"/>
+                    <if expression="peso &gt; 75">
+                        <then>
+                            <assign variable="peso" expression="pesoSup+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <comment text="a m&#233;dia das idades dos jogadores de cada time&#13;&#10;10 times&#13;&#10;11 jogadores cada"/>
+                <assign variable="mediaIdade" expression="somaId / 11"/>
+                <output expression="&quot;M&#233;dia das idades dos jogadores de cada time: &quot;&amp; mediaIdade" newline="True"/>
+            </for>
+            <assign variable="mediaAlt" expression="somaAlt / 110"/>
+            <assign variable="porcentagem" expression="( pesoSup / (10 * 11)) * 100"/>
+            <output expression="&quot;Quantidade de jogadores com idade inferior a 20 anos: &quot;&amp; idadeInferior" newline="True"/>
+            <output expression="&quot;M&#233;dia das alturas de todos os jogadores do campeonato: &quot; &amp; mediaAlt" newline="True"/>
+            <output expression="&quot;Porcentagem de jogadores com mais de 75 kg: &quot; &amp; porcentagem" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

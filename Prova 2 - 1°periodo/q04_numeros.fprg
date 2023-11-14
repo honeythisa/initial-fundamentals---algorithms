@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="raul_"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-06-08 02:44:50 "/>
+        <attribute name="created" value="cmF1bF87TEFQVE9QLTZGRTBKQjdFOzIwMjMtMDYtMDg7IjAxOjM1OjE2ICI7MjczNw=="/>
+        <attribute name="edited" value="cmF1bF87TEFQVE9QLTZGRTBKQjdFOzIwMjMtMDYtMDg7IjAxOjM1OjE5ICI7MTttYXRoZTtOT1RFQk9PSzsyMDIzLTA2LTA3OyIwMjo1MjowNiAiOzQgcHJvdmEgMi5mcHJnOzY0ODc="/>
+        <attribute name="edited" value="cmF1bF87TEFQVE9QLTZGRTBKQjdFOzIwMjMtMDYtMDg7IjAxOjM1OjIzICI7NDsyODQ2"/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDYtMDg7IjAyOjQ0OjUwICI7MTsyMDU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor, contagem, maior, menor, soma" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <assign variable="soma" expression="0"/>
+            <assign variable="contagem" expression="0"/>
+            <assign variable="valor" expression="1"/>
+            <do expression="valor != 0">
+                <output expression="&quot;Digite o &quot;&amp;contagem +1&amp;&quot;&#186; valor (ou 0 p/ sair, assim podendo ver os resultados)&quot;" newline="True"/>
+                <input variable="valor"/>
+                <if expression="valor &gt; 0">
+                    <then>
+                        <if expression="contagem &gt; 0">
+                            <then>
+                                <if expression="valor &gt; maior">
+                                    <then>
+                                        <assign variable="maior" expression="valor"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <if expression="valor &lt; menor">
+                                    <then>
+                                        <assign variable="menor" expression="valor"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else>
+                                <assign variable="maior" expression="valor"/>
+                                <assign variable="menor" expression="valor"/>
+                            </else>
+                        </if>
+                        <assign variable="contagem" expression="contagem + 1"/>
+                    </then>
+                    <else>
+                        <if expression="valor = 0">
+                            <then>
+                                <output expression="&quot;Finalizando o programa!&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Valor informado &#233; negativo.&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="soma" expression="soma + valor"/>
+            </do>
+            <assign variable="media" expression="soma / contagem"/>
+            <output expression="&quot;A m&#233;dia dos n&#250;meros informados &#233;: &quot;&amp;media" newline="True"/>
+            <output expression="&quot;O maior n&#250;mero informado foi o: &quot;&amp;maior" newline="True"/>
+            <output expression="&quot;O menor n&#250;mero informado foi o: &quot;&amp;menor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

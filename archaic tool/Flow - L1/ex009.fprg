@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-11 06:38:12 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA2OjMyOjM5ICI7MTk1MQ=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA2OjM4OjEyICI7MTsyMDU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <if expression="(x &gt;= 1) and (x &lt;= 9)">
+                <then>
+                    <output expression="&quot;O valor est&#225; na faixa permitida.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O valor est&#225; fora da faixa permitida.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

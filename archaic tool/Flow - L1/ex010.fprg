@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-11 08:22:15 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA4OjA3OjA5ICI7MTk1Mg=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA4OjIyOjE1ICI7MTsyMDU0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="fm" type="Integer" array="False" size=""/>
+            <output expression="&quot;Informe seu nome:&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Informe o n&#250;mero do seu sexo: 1 - Mulher, 2 - Homem&quot;" newline="True"/>
+            <input variable="fm"/>
+            <if expression="fm = 1">
+                <then>
+                    <output expression="&quot;Ilma Sra. &quot;&amp; nome" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="fm = 2">
+                <then>
+                    <output expression="&quot;Ilmo Sr. &quot; &amp; nome" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

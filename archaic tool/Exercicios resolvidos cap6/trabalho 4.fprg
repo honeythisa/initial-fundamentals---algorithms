@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-07-07 02:37:22 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDYtMjA7IjA3OjM2OjIyICI7MTk1MA=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDctMDc7IjAyOjM3OjIyICI7NDsyMDYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="um vetor com 12 n&#250;meros reais"/>
+            <declare name="vet" type="Real" array="True" size="12"/>
+            <declare name="i, contador, seMaior" type="Real" array="False" size=""/>
+            <assign variable="contador" expression="0"/>
+            <assign variable="seMaior" expression="0"/>
+            <for variable="i" start="0" end="11" direction="inc" step="1">
+                <output expression="&quot;Informe um n&#250;mero&quot;&amp; &quot; [&quot;&amp;contador &amp;&quot;/&quot;&amp;12&amp;&quot;] : &quot;" newline="True"/>
+                <assign variable="contador" expression="contador + 1"/>
+                <input variable="vet[i]"/>
+            </for>
+            <comment text="calcular e mostrar os n&#250;meros maiores que 50 e suas respectivas posi&#231;&#245;es&#13;&#10;&#13;&#10;"/>
+            <for variable="i" start="0" end="11" direction="inc" step="1">
+                <if expression="vet[i] &gt; 50">
+                    <then>
+                        <output expression="&quot;N&#250;mero: &quot;&amp; vet[i] &amp;&quot; |&quot;&amp;  &quot; e est&#225; na posi&#231;ao [&quot;&amp; i &amp;&quot;] &quot;" newline="True"/>
+                        <assign variable="seMaior" expression="seMaior + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Caso nenhum n&#250;mero seja maior que 50, o algoritmo deve mostrar a mensagem: &quot;Nenhum n&#250;mero maior que 50 foi encontrado.&quot;"/>
+            <if expression="seMaior == 0">
+                <then>
+                    <output expression="&quot;Nenhum n&#250;mero maior que 50 foi encontrado.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

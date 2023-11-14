@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="07761094640"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-06-27 08:14:17 "/>
+        <attribute name="created" value="MDc3NjEwOTQ2NDA7QjAzTTExOzIwMjMtMDYtMjc7IjA3OjE1OjQ1ICI7MjExMQ=="/>
+        <attribute name="edited" value="MDc3NjEwOTQ2NDA7QjAzTTExOzIwMjMtMDYtMjc7IjA4OjE0OjE3ICI7MzsyMjIw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vet" type="Integer" array="True" size="15"/>
+            <declare name="Maior, Menor, M&#233;dArit, i, PosiMaior, PosiMenor, ValoPosi, Soma" type="Integer" array="False" size=""/>
+            <assign variable="Soma" expression="0"/>
+            <for variable="i" start="0" end="14" direction="inc" step="1">
+                <output expression="&quot;Digite o n&#250;mero do &quot;&amp;i + 1&amp;&quot;&#176; vetor: &quot;" newline="True"/>
+                <input variable="vet[i]"/>
+                <assign variable="Soma" expression="vet[i] + Soma"/>
+            </for>
+            <assign variable="Maior" expression="vet[1]"/>
+            <assign variable="Menor" expression="vet[1]"/>
+            <assign variable="PosiMaior" expression="0"/>
+            <assign variable="PosiMenor" expression="0"/>
+            <assign variable="ValoPosi" expression="0"/>
+            <for variable="i" start="0" end="14" direction="inc" step="1">
+                <if expression="vet[i] &gt; maior">
+                    <then>
+                        <assign variable="Maior" expression="vet[i]"/>
+                        <assign variable="PosiMaior" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vet[i] &lt; Menor">
+                    <then>
+                        <assign variable="Menor" expression="vet[i]"/>
+                        <assign variable="PosiMenor" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="14" direction="inc" step="1">
+                <if expression="vet[i] &gt;= 0">
+                    <then>
+                        <assign variable="ValoPosi" expression="vet[i]"/>
+                        <output expression="&quot;Valores positivos: &quot;&amp;ValoPosi" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="M&#233;dArit" expression="Soma/15"/>
+            <output expression="&quot;O maior n&#250;mero &#233;: &quot;&amp;Maior&amp; &quot; E est&#225; na posi&#231;&#227;o: &quot;&amp;PosiMaior + 1" newline="True"/>
+            <output expression="&quot;O Menor n&#250;mero &#233;: &quot;&amp;Menor&amp; &quot; E est&#225; na posi&#231;&#227;o: &quot;&amp;PosiMenor + 1" newline="True"/>
+            <output expression="&quot;A m&#233;dia aritm&#233;tica &#233;: &quot;&amp;M&#233;dArit" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

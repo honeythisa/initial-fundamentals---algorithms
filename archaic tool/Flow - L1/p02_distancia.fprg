@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-25 08:28:26 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMjU7IjA3OjUxOjQxICI7MTk1MQ=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMjU7IjA4OjI4OjI2ICI7MTsyMDY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x1, x2, y1, y2, d" type="Real" array="False" size=""/>
+            <input variable="x1"/>
+            <input variable="y1"/>
+            <input variable="x2"/>
+            <input variable="y2"/>
+            <assign variable="d" expression="sqrt((x2 - x1)^2 + (y2 - y1)^2)"/>
+            <output expression="&quot;A dist&#226;ncia entre os pontos P(&quot;&amp;x1&amp;&quot;, &quot;&amp;y1&amp;&quot;)&quot;&amp;&quot; e &quot;&amp;&quot;Q(&quot;&amp;x2&amp;&quot; ,&quot;&amp;y2&amp;&quot;)&quot;&amp;&quot; &#233; &quot;&amp;d" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

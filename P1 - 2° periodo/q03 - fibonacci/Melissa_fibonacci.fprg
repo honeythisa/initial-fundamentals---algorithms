@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Cliente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 08:39:21 "/>
+        <attribute name="created" value="Q2xpZW50ZTtERVNLVE9QLUlRSTM4OUk7MjAyMy0wOS0xNjsiMDI6NTg6MDcgIjsyOTU1"/>
+        <attribute name="edited" value="Q2xpZW50ZTtERVNLVE9QLUlRSTM4OUk7MjAyMy0wOS0xNjsiMDQ6MjQ6MTIgIjsxOzMwNTQ="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDktMTY7IjA4OjM5OjIxICI7MTsyMDY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <call expression="somatorioFib(N)"/>
+        </body>
+    </function>
+    <function name="somatorioFib" type="None" variable="">
+        <parameters>
+            <parameter name="N" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, a, b, soma" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="1"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="soma" expression="1"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <assign variable="soma" expression="a + b"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="soma"/>
+                <assign variable="soma" expression="soma - 1"/>
+                <output expression="soma" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

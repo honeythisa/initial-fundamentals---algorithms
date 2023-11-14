@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-07-05 11:50:15 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDYtMjA7IjA3OjM2OjIyICI7MTk1MA=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDctMDU7IjExOjUwOjE1ICI7NTsyMDU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="coletar 10 valores"/>
+            <declare name="vet" type="Integer" array="True" size="10"/>
+            <declare name="i, maior, menor, posMaior, posMenor, cont, n" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Valor da posi&#231;ao [&quot;&amp; i &amp;&quot;] :&quot;" newline="False"/>
+                <input variable="vet[i]"/>
+                <comment text="considera&#231;ao de valores negativos sao invalidos e valores negativos ou iguais a zero n&#227;o entrar&#227;o nos c&#225;lculos."/>
+                <if expression="vet[i] &lt;= 0">
+                    <then>
+                        <output expression="&quot;Valores negativos s&#227;o inv&#225;lidos!&quot;" newline="True"/>
+                        <output expression="&quot;Valor da posi&#231;ao [&quot;&amp; i &amp;&quot;] :&quot;" newline="False"/>
+                        <input variable="vet[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="maior" expression="vet[0]"/>
+            <assign variable="posMaior" expression="0"/>
+            <assign variable="menor" expression="vet[0]"/>
+            <assign variable="posMenor" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="vet[i] &gt; maior">
+                    <then>
+                        <assign variable="maior" expression="vet[i]"/>
+                        <assign variable="posMaior" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="vet[i] &lt; menor">
+                    <then>
+                        <assign variable="menor" expression="vet[i]"/>
+                        <assign variable="posMenor" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+                <comment text="o trecho abaixo verifica se o elemento na posi&#231;&#227;o i do vetor &#233; um n&#250;mero primo"/>
+                <assign variable="cont" expression="0"/>
+                <for variable="n" start="1" end="vet[i]" direction="inc" step="1">
+                    <if expression="(vet[i]%n) = 0">
+                        <then>
+                            <assign variable="cont" expression="cont + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="cont &lt;= 2">
+                    <then>
+                        <output expression="vet[i]&amp;&quot; &#233; um n&#250;mero primo!&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Maior elemento: &quot;&amp;maior&amp;&quot; e est&#225; na posi&#231;&#227;o: &quot; &amp;posMaior" newline="True"/>
+            <output expression="&quot;Menor elemento: &quot;&amp;menor&amp;&quot; e est&#225; na posi&#231;&#227;o: &quot;&amp;posMenor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

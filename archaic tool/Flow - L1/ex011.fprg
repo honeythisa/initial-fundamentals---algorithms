@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-11 08:35:12 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA4OjIyOjIzICI7MTk0NQ=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMTE7IjA4OjM1OjEyICI7MTsyMDU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valorSalario, valorFin, conta" type="Integer" array="False" size=""/>
+            <input variable="valorSalario"/>
+            <input variable="valorFin"/>
+            <assign variable="conta" expression="valorSalario*5"/>
+            <if expression="valorFin &lt;= conta">
+                <then>
+                    <output expression="&quot;Financiamento Concedido.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Financiamento Negado.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Obrigado por nos consultar&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

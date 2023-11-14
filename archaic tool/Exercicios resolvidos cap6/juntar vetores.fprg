@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-06-21 01:10:24 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDYtMjA7IjA5OjQ1OjM5ICI7MTk2MA=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDYtMjE7IjAxOjEwOjI0ICI7MTsyMDQ3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vet1" type="Integer" array="True" size="10"/>
+            <declare name="vet2" type="Integer" array="True" size="10"/>
+            <declare name="vet3" type="Integer" array="True" size="20"/>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <input variable="vet1[i]"/>
+                <assign variable="vet3[j]" expression="vet1[i]"/>
+                <assign variable="j" expression="j+1"/>
+                <input variable="vet2[i]"/>
+                <assign variable="vet3[j]" expression="vet2[i]"/>
+                <assign variable="j" expression="j+1"/>
+            </for>
+            <output expression="&quot;O vetor resultante &#233;: &quot;" newline="True"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <output expression="vet3[i]&amp; &quot;, &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

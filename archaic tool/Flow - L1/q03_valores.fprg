@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-25 10:02:10 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMjU7IjA4OjI4OjM3ICI7MTk2MQ=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMjU7IjEwOjAyOjEwICI7MTsyMDQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, e, p1, p2, p3, p4, p5, mAritmetica, mPonderada, maior, menor" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <assign variable="maior" expression="a"/>
+            <assign variable="menor" expression="a"/>
+            <input variable="b"/>
+            <if expression="(b &gt; maior)">
+                <then>
+                    <assign variable="maior" expression="b"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(b &lt; menor)">
+                <then>
+                    <assign variable="menor" expression="b"/>
+                </then>
+                <else/>
+            </if>
+            <input variable="c"/>
+            <if expression="(c &gt; maior)">
+                <then>
+                    <assign variable="maior" expression="c"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(c &lt; menor)">
+                <then>
+                    <assign variable="menor" expression="c"/>
+                </then>
+                <else/>
+            </if>
+            <input variable="d"/>
+            <if expression="(d &gt; maior)">
+                <then>
+                    <assign variable="maior" expression="d"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(d &lt; menor)">
+                <then>
+                    <assign variable="menor" expression="d"/>
+                </then>
+                <else/>
+            </if>
+            <input variable="e"/>
+            <if expression="(e &gt; maior)">
+                <then>
+                    <assign variable="maior" expression="e"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(e &lt; menor)">
+                <then>
+                    <assign variable="menor" expression="e"/>
+                </then>
+                <else/>
+            </if>
+            <comment text="media aritmetica"/>
+            <assign variable="mAritmetica" expression="(a+b+c+d+e)/5"/>
+            <comment text="media ponderada"/>
+            <assign variable="p1" expression="a/(a+b+c+d+e)"/>
+            <assign variable="p2" expression="b/(a+b+c+d+e)"/>
+            <assign variable="p3" expression="c/(a+b+c+d+e)"/>
+            <assign variable="p4" expression="d/(a+b+c+d+e)"/>
+            <assign variable="p5" expression="e/(a+b+c+d+e)"/>
+            <assign variable="mPonderada" expression="((a*p1) + (b*p2) + (c*p3) + (d*p4) + (e*p5))/5"/>
+            <output expression="&quot;O maior valor &#233;: &quot;&amp;maior" newline="True"/>
+            <output expression="&quot;O menor valor &#233;: &quot;&amp;menor" newline="True"/>
+            <output expression="&quot;A m&#233;dia aritm&#233;tica: &quot;&amp;mAritmetica" newline="True"/>
+            <output expression="&quot;A m&#233;dia ponderada: &quot;&amp;mPonderada" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="10429889607"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-06-07 03:42:57 "/>
+        <attribute name="created" value="MTA0Mjk4ODk2MDc7QjAzTTEyOzIwMjMtMDYtMDY7IjA3OjIzOjA2ICI7MjExNQ=="/>
+        <attribute name="edited" value="MTA0Mjk4ODk2MDc7QjAzTTEyOzIwMjMtMDYtMDY7IjA4OjM2OjAzICI7OTsyMjMz"/>
+        <attribute name="edited" value="cnVyYWwyMDQ7UlVSQUwyMDQ7MjAyMy0wNi0wNzsiMDI6MjY6MDUgIjsxMzsyNTg5"/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDYtMDc7IjAzOjQyOjU3ICI7MTsyMDY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="patual, novop, vendaMedia" type="Real" array="False" size=""/>
+            <assign variable="novop" expression="0"/>
+            <output expression="&quot;Venda m&#233;dia: &quot;" newline="True"/>
+            <input variable="vendaMedia"/>
+            <output expression="&quot;Pre&#231;o atual: &quot;" newline="True"/>
+            <input variable="patual"/>
+            <if expression="(vendaMedia &lt; 500) and (patual &lt; 30)">
+                <then>
+                    <assign variable="novop" expression="patual + (patual * 10/100)"/>
+                </then>
+                <else>
+                    <if expression="(vendaMedia &gt;= 500) and (vendaMedia &lt; 1200) and (patual &gt;= 30) and (patual &lt; 80)">
+                        <then>
+                            <assign variable="novop" expression="patual + (patual * 15/100)"/>
+                        </then>
+                        <else>
+                            <if expression="(vendaMedia &gt;= 1200) and (patual &gt;= 80)">
+                                <then>
+                                    <assign variable="novop" expression="patual - (patual * 20/100)"/>
+                                </then>
+                                <else>
+                                    <assign variable="novop" expression="patual"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Pre&#231;o: &quot;&amp;novop" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

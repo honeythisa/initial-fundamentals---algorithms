@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-18 09:14:58 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDQtMTg7IjA3OjMxOjA2ICI7MTk1Mg=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDQtMTg7IjA5OjE0OjU4ICI7MTsyMDcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ang, alt, escada, radiano" type="Real" array="False" size=""/>
+            <input variable="ang"/>
+            <input variable="alt"/>
+            <assign variable="radiano" expression="ang * 3.14 / 180"/>
+            <assign variable="escada" expression="alt / sin(radiano)"/>
+            <output expression="escada" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

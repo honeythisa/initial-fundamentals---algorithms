@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="melis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-30 10:02:34 "/>
+        <attribute name="created" value="bWVsaXM7TUVMOzIwMjMtMDUtMzA7IjA5OjU1OjE0ICI7MTk1NA=="/>
+        <attribute name="edited" value="bWVsaXM7TUVMOzIwMjMtMDUtMzA7IjEwOjAyOjM0ICI7MTsyMDQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, z" type="Real" array="False" size=""/>
+            <assign variable="x" expression="-3"/>
+            <while expression="x &lt;= 3">
+                <assign variable="y" expression="-x^2 + 4*x - 5"/>
+                <assign variable="z" expression="x^2 + 4*x + 5"/>
+                <output expression="x &amp; &quot; | &quot; &amp; y &amp; &quot; | &quot; &amp; z" newline="True"/>
+                <assign variable="x" expression="x + 0.5"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
